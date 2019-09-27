@@ -1,8 +1,10 @@
 # 算法学习
 ### 一、冒泡排序
-    BubbleActivity.class
+    BubbleSortActivity.kt
 ### 二、快速排序
-    QuickSortActivity.class
+    QuickSortActivity.kt
+### 三、选择排序
+    SelectSortActivity.kt
 
 
 

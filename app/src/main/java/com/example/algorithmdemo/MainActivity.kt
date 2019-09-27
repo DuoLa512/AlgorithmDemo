@@ -2,6 +2,7 @@ package com.example.algorithmdemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.algorithmdemo.algorithm.SelectSortActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 
@@ -13,7 +14,12 @@ class MainActivity : AppCompatActivity() {
 
         //冒泡排序
         btnMp.setOnClickListener {
-            startActivity<BubbleActivity>()
+            startActivity<BubbleSortActivity>()
+        }
+
+        //选择排序
+        btnSz.setOnClickListener {
+            startActivity<SelectSortActivity>()
         }
 
         //快速排序

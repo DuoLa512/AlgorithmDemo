@@ -1,25 +1,24 @@
-package com.example.algorithmdemo
+package com.example.algorithmdemo.algorithm
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.algorithmdemo.R
 import com.example.algorithmdemo.util.getRandom
-import kotlinx.android.synthetic.main.activity_bubble.*
-import kotlinx.android.synthetic.main.activity_bubble.btnAsc
-import kotlinx.android.synthetic.main.activity_bubble.btnDes
-import kotlinx.android.synthetic.main.activity_bubble.btnRandom
-import kotlinx.android.synthetic.main.activity_bubble.tvAsc
-import kotlinx.android.synthetic.main.activity_bubble.tvDes
+import kotlinx.android.synthetic.main.activity_sort.*
 
 /**
- * Created by LJH on 2019/9/25
- * Description:冒泡算法
+ * Created by LJH on 2019/9/27
+ * Description:选择排序
  */
-class BubbleActivity : AppCompatActivity() {
+class SelectSortActivity : AppCompatActivity() {
+
     private val sb = StringBuilder()
     private lateinit var mArray: IntArray
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bubble)
+        setContentView(R.layout.activity_sort)
+        tvTimeFzd.text = "选择排序的时间复杂度:O(n²)"
         mArray = getRandom(100, 10)
         sb.append("随机10个数字： ")
         mArray.forEachIndexed { index, i ->
@@ -31,7 +30,6 @@ class BubbleActivity : AppCompatActivity() {
 
         tvNumbers.text = sb
 
-
         btnAsc.setOnClickListener {
             tvAsc.text = getAscData()
         }
@@ -39,9 +37,11 @@ class BubbleActivity : AppCompatActivity() {
         btnDes.setOnClickListener {
             tvDes.text = getDesData()
         }
+
         btnRandom.setOnClickListener {
             getRandom()
         }
+
     }
 
     /**
@@ -67,17 +67,20 @@ class BubbleActivity : AppCompatActivity() {
     private fun getAscData(): String {
         sb.clear()
         sb.append("升序数据：")
-        var tmp: Int
-        for (i in mArray.indices) {
-            for (j in 0 until mArray.size - 1 - i) {
-                if (mArray[j] > mArray[j + 1]) {
-                    tmp = mArray[j]
-                    //小的往左移
-                    mArray[j] = mArray[j + 1]
-                    //大的往右移
-                    mArray[j + 1] = tmp
+        for (i in 0 until mArray.size - 1) {
+            var minIndex = i
+            for (j in (i + 1) until mArray.size) {
+                minIndex = if (mArray[minIndex] < mArray[j]) {
+                    minIndex
+                } else {
+                    j
                 }
             }
+            //交换位置
+            val tmp = mArray[i]
+            mArray[i] = mArray[minIndex]
+            mArray[minIndex] = tmp
+
         }
 
         mArray.forEachIndexed { index, i ->
@@ -87,7 +90,6 @@ class BubbleActivity : AppCompatActivity() {
             }
         }
         return sb.toString()
-
     }
 
     /**
@@ -96,26 +98,28 @@ class BubbleActivity : AppCompatActivity() {
     private fun getDesData(): String {
         sb.clear()
         sb.append("降序数据：")
-        var tmp: Int
-        for (i in mArray.indices) {
-            for (j in 0 until mArray.size - 1 - i) {
-                if (mArray[j] < mArray[j + 1]) {
-                    tmp = mArray[j]
-                    //大的往左移
-                    mArray[j] = mArray[j + 1]
-                    //小的往右移
-                    mArray[j + 1] = tmp
+        for (i in 0 until mArray.size - 1) {
+            var maxIndex = i
+            for (j in i + 1 until mArray.size) {
+                maxIndex = if (mArray[maxIndex] > mArray[j]) {
+                    maxIndex
+                } else {
+                    j
                 }
-            }
-        }
 
+            }
+
+            //交换位置
+            val tmp = mArray[i]
+            mArray[i] = mArray[maxIndex]
+            mArray[maxIndex] = tmp
+        }
         mArray.forEachIndexed { index, i ->
             sb.append(i)
             if (index < mArray.size - 1) {
                 sb.append(" ; ")
             }
         }
-
         return sb.toString()
     }
 }
