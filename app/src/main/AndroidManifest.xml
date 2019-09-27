@@ -19,6 +19,7 @@
         <activity android:name=".BubbleSortActivity" />
         <activity android:name=".QuickSortActivity" />
         <activity android:name=".algorithm.SelectSortActivity" />
+        <activity android:name=".algorithm.BinarySearchActivity" />
     </application>
 
 </manifest>

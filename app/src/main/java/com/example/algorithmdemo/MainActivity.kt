@@ -2,6 +2,7 @@ package com.example.algorithmdemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.algorithmdemo.algorithm.BinarySearchActivity
 import com.example.algorithmdemo.algorithm.SelectSortActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
@@ -25,6 +26,11 @@ class MainActivity : AppCompatActivity() {
         //快速排序
         btnKp.setOnClickListener {
             startActivity<QuickSortActivity>()
+        }
+
+        //二分查找
+        btnRf.setOnClickListener {
+            startActivity<BinarySearchActivity>()
         }
     }
 }

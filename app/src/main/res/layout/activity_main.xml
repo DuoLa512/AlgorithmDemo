@@ -34,5 +34,13 @@
         app:layout_constraintBaseline_toBaselineOf="@id/btnMp"
         app:layout_constraintStart_toEndOf="@id/btnSz" />
 
+    <Button
+        android:id="@+id/btnRf"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="二分查找"
+        app:layout_constraintStart_toStartOf="@id/btnMp"
+        app:layout_constraintTop_toBottomOf="@id/btnMp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
