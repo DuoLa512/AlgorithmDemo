@@ -3,6 +3,7 @@ package com.example.algorithmdemo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.algorithmdemo.algorithm.BinarySearchActivity
+import com.example.algorithmdemo.algorithm.QuickSortActivity
 import com.example.algorithmdemo.algorithm.SelectSortActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity

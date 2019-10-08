@@ -6,7 +6,7 @@
 ### 三、选择排序
     SelectSortActivity.kt
 ### 四、二分查找
-    BinarySearchActivity
+    BinarySearchActivity.kt
 
 
 

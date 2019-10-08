@@ -103,7 +103,7 @@ class BinarySearchActivity : AppCompatActivity() {
         //查找范围中位数
         var mid: Int
         while (start <= end) {
-            //mid = (start+end)/2  有可能溢出（比如：start = 0 ,end = 1,mid = 0）
+            //mid = (start+end)/2  有可能溢出（比如：start = 0 ,end = 0,报错）
             mid = start + (end - start) / 2
             when {
                 //如果刚好相等，直接返回
