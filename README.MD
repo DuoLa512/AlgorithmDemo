@@ -12,6 +12,8 @@
 ## 设计模式
 ### 一、代理模式
     com.example.algorithmdemo.design.proxy.**
+### 二、工厂模式
+    com.example.algorithmdemo.design.factory.**
 
 
 
