@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BubbleSortActivity" />
-        <activity android:name=".QuickSortActivity" />
+        <activity android:name=".algorithm.BubbleSortActivity" />
+        <activity android:name=".algorithm.QuickSortActivity" />
         <activity android:name=".algorithm.SelectSortActivity" />
         <activity android:name=".algorithm.BinarySearchActivity" />
     </application>

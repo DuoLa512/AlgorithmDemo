@@ -1,7 +1,8 @@
-package com.example.algorithmdemo
+package com.example.algorithmdemo.algorithm
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.algorithmdemo.R
 import com.example.algorithmdemo.util.getRandom
 import kotlinx.android.synthetic.main.activity_sort.*
 import kotlinx.android.synthetic.main.activity_sort.btnAsc
