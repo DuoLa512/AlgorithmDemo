@@ -14,6 +14,8 @@
     com.example.algorithmdemo.design.proxy.**
 ### 二、工厂模式
     com.example.algorithmdemo.design.factory.**
+### 三、单例模式
+    com.example.algorithmdemo.design.singleton.**
 
 
 
