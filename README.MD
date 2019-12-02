@@ -16,7 +16,8 @@
     com.example.algorithmdemo.design.factory.**
 ### 三、单例模式
     com.example.algorithmdemo.design.singleton.**
-
+### 四、建造者模式
+    com.example.algorithmdemo.design.builder.**
 
 
 
